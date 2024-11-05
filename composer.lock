@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de6629b362224ae56aa7cd8d2a024a41",
+    "content-hash": "f33f6e4cd5db5c6f758b107a249328a7",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4692,41 +4692,41 @@
         },
         {
             "name": "klapaudius/oauth-server-bundle",
-            "version": "3.1.2",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/klapaudius/FOSOAuthServerBundle.git",
-                "reference": "e6e918c8606eb7a2efadd6e7ba133f823c2cc75f"
+                "reference": "0d8b6bc14209125b3712689fe17586c056084794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/klapaudius/FOSOAuthServerBundle/zipball/e6e918c8606eb7a2efadd6e7ba133f823c2cc75f",
-                "reference": "e6e918c8606eb7a2efadd6e7ba133f823c2cc75f",
+                "url": "https://api.github.com/repos/klapaudius/FOSOAuthServerBundle/zipball/0d8b6bc14209125b3712689fe17586c056084794",
+                "reference": "0d8b6bc14209125b3712689fe17586c056084794",
                 "shasum": ""
             },
             "require": {
+                "doctrine/doctrine-bundle": "~2.0",
                 "klapaudius/oauth2-php": "~1.4",
-                "php": "^7.4.25|^8.0",
-                "symfony/dependency-injection": "~5.3",
-                "symfony/framework-bundle": "~5.3",
-                "symfony/security-bundle": "~5.3",
-                "symfony/twig-bundle": "~5.3"
+                "php": "^8.0",
+                "symfony/dependency-injection": "~6.0",
+                "symfony/form": "~6.0",
+                "symfony/framework-bundle": "~6.0",
+                "symfony/security-bundle": "~6.0",
+                "symfony/twig-bundle": "~6.0"
             },
             "require-dev": {
-                "doctrine/doctrine-bundle": "~2.0",
                 "doctrine/mongodb-odm": "~2.0",
                 "doctrine/orm": "~2.2",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "phing/phing": "~2.4",
                 "php-mock/php-mock-phpunit": "~1.0|~2.0",
-                "phpstan/phpstan-phpunit": "^0.12.20",
-                "phpunit/phpunit": "~6.0|~8.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "~9.0",
                 "symfony/class-loader": "^2.0",
-                "symfony/console": "^5.3",
-                "symfony/form": "^5.3",
-                "symfony/phpunit-bridge": "^5.3",
-                "symfony/templating": "^5.3",
-                "symfony/yaml": "^5.3"
+                "symfony/console": "~6.0",
+                "symfony/phpunit-bridge": "~6.0",
+                "symfony/templating": "~6.0",
+                "symfony/yaml": "~6.0"
             },
             "suggest": {
                 "doctrine/doctrine-bundle": "*",
@@ -4737,7 +4737,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -4767,7 +4767,7 @@
                 }
             ],
             "description": "Symfony OAuth Server Bundle",
-            "homepage": "http://friendsofsymfony.github.com",
+            "homepage": "https://github.com/klapaudius/FOSOAuthServerBundle",
             "keywords": [
                 "oauth",
                 "oauth2",
@@ -4775,9 +4775,9 @@
             ],
             "support": {
                 "issues": "https://github.com/klapaudius/FOSOAuthServerBundle/issues",
-                "source": "https://github.com/klapaudius/FOSOAuthServerBundle/tree/3.1.2"
+                "source": "https://github.com/klapaudius/FOSOAuthServerBundle/tree/4.0.5"
             },
-            "time": "2022-05-11T14:46:39+00:00"
+            "time": "2023-11-03T11:48:07+00:00"
         },
         {
             "name": "klapaudius/oauth2-php",
@@ -5345,70 +5345,6 @@
                 }
             ],
             "time": "2024-01-28T23:22:08+00:00"
-        },
-        {
-            "name": "leezy/pheanstalk-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/armetiz/LeezyPheanstalkBundle.git",
-                "reference": "972a5c154e52fd04ec70c13519ddb73dec819700"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/armetiz/LeezyPheanstalkBundle/zipball/972a5c154e52fd04ec70c13519ddb73dec819700",
-                "reference": "972a5c154e52fd04ec70c13519ddb73dec819700",
-                "shasum": ""
-            },
-            "require": {
-                "pda/pheanstalk": "^4",
-                "php": ">=7.2.0",
-                "psr/log": "^1",
-                "symfony/console": "^3|^4|^5",
-                "symfony/framework-bundle": "^3|^4|^5"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8|^9.5"
-            },
-            "default-branch": true,
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Leezy\\PheanstalkBundle\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Tourlourat",
-                    "email": "thomas@tourlourat.com",
-                    "homepage": "http://www.armetiz.info"
-                }
-            ],
-            "description": "The LeezyPheanstalkBundle is a Symfony Bundle that provides a command line interface for manage the Beanstalkd workqueue server & a pheanstalk integration.",
-            "homepage": "https://github.com/armetiz/LeezyPheanstalkBundle",
-            "keywords": [
-                "asynchronous",
-                "beanstalkd",
-                "bundle",
-                "messaging",
-                "pheanstalk",
-                "queueing",
-                "symfony"
-            ],
-            "support": {
-                "issues": "https://github.com/armetiz/LeezyPheanstalkBundle/issues",
-                "source": "https://github.com/armetiz/LeezyPheanstalkBundle/tree/5.0.0"
-            },
-            "time": "2022-03-08T08:08:12+00:00"
         },
         {
             "name": "lightsaml2/lightsaml",
@@ -6052,7 +5988,7 @@
             "dist": {
                 "type": "path",
                 "url": "app",
-                "reference": "4419decb8491f33390654a97c5870395e049fb99"
+                "reference": "23b6ae60093ee3ac93b6bf86498b3b77887b8b4b"
             },
             "require": {
                 "aws/aws-sdk-php": "~3.0",
@@ -6089,10 +6025,9 @@
                 "jms/serializer-bundle": "^5.4",
                 "joomla/filter": "~1.4.4",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "klapaudius/oauth-server-bundle": "^3.1.0",
+                "klapaudius/oauth-server-bundle": "^4.0.0",
                 "knplabs/gaufrette": "~0.9.0",
                 "knplabs/knp-menu-bundle": "^3.0",
-                "leezy/pheanstalk-bundle": "dev-master",
                 "lightsaml2/sp-bundle": "^3.0.0",
                 "matomo/device-detector": "^4.0",
                 "matthiasmullie/minify": "^1.3",
