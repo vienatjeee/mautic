@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mautic\InstallBundle\InstallFixtures\ORM;
+namespace MauticPlugin\GrapesJsBuilderBundle\InstallFixtures\ORM;
 
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;

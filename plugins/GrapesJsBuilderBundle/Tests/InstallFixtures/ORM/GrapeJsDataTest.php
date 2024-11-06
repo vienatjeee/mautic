@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Mautic\InstallBundle\Tests\InstallFixtures\ORM;
+namespace MauticPlugin\GrapesJsBuilderBundle\Tests\InstallFixtures\ORM;
 
 use Mautic\CoreBundle\Test\MauticMysqlTestCase;
-use Mautic\InstallBundle\InstallFixtures\ORM\GrapesJsData;
 use Mautic\PluginBundle\Entity\Integration;
 use Mautic\PluginBundle\Entity\Plugin;
+use MauticPlugin\GrapesJsBuilderBundle\InstallFixtures\ORM\GrapesJsData;
 use PHPUnit\Framework\Assert;
 
 class GrapeJsDataTest extends MauticMysqlTestCase
