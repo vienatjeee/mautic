@@ -4,3 +4,4 @@
     - `Mautic\ApiBundle\DependencyInjection\Factory\ApiFactory` was removed.
     - The `friendsofsymfony/oauth-server-bundle` package was replaced with a maintained fork `klapaudius/oauth-server-bundle`
     - The `lightsaml/sp-bundle` package was replaced with a maintained fork `lightsaml2/sp-bundle`
+- Deprecated `Mautic\LeadBundle\Model\FieldModel::getUniqueIdentiferFields` and `Mautic\LeadBundle\Model\FieldModel::getUniqueIdentifierFields` were removed. Use `Mautic\LeadBundle\Field\FieldsWithUniqueIdentifier::getFieldsWithUniqueIdentifier` instead.
