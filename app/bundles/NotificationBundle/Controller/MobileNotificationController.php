@@ -270,7 +270,7 @@ class MobileNotificationController extends FormController
         // set the page we came from
         $page         = $session->get('mautic.mobile_notification.page', 1);
         $action       = $this->generateUrl('mautic_mobile_notification_action', ['objectAction' => 'new']);
-        $notification = $request->request->get('notification') ?? [];
+        $notification = $request->request->all()['notification'] ?? [];
         $updateSelect = 'POST' === $method
             ? ($notification['updateSelect'] ?? false)
             : $request->get('updateSelect', false);
@@ -439,7 +439,7 @@ class MobileNotificationController extends FormController
 
         // Create the form
         $action       = $this->generateUrl('mautic_mobile_notification_action', ['objectAction' => 'edit', 'objectId' => $objectId]);
-        $notification = $request->request->get('notification') ?? [];
+        $notification = $request->request->all()['notification'] ?? [];
         $updateSelect = 'POST' === $method
             ? ($notification['updateSelect'] ?? false)
             : $request->get('updateSelect', false);
@@ -645,10 +645,8 @@ class MobileNotificationController extends FormController
 
     /**
      * Deletes a group of entities.
-     *
-     * @return Response
      */
-    public function batchDeleteAction(Request $request)
+    public function batchDeleteAction(Request $request): Response
     {
         $page      = $request->getSession()->get('mautic.mobile_notification.page', 1);
         $returnUrl = $this->generateUrl('mautic_mobile_notification_index', ['page' => $page]);

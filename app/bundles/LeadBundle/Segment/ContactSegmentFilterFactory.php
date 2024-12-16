@@ -86,11 +86,9 @@ class ContactSegmentFilterFactory
     }
 
     /**
-     * @return FilterQueryBuilderInterface
-     *
      * @throws \Exception
      */
-    private function getQueryBuilderForFilter(FilterDecoratorInterface $decorator, ContactSegmentFilterCrate $contactSegmentFilterCrate)
+    private function getQueryBuilderForFilter(FilterDecoratorInterface $decorator, ContactSegmentFilterCrate $contactSegmentFilterCrate): ?FilterQueryBuilderInterface
     {
         $qbServiceId = $decorator->getQueryType($contactSegmentFilterCrate);
 

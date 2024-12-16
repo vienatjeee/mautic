@@ -1146,6 +1146,7 @@ class SalesforceIntegration extends CrmAbstractIntegration
             $fromDate,
             $toDate
         ) : 0;
+        $totalToCreate = is_array($totalToCreate) ? count($totalToCreate) : (int) $totalToCreate;
         $totalCount    = $totalToProcess = $totalToCreate + $totalToUpdate;
 
         if (defined('IN_MAUTIC_CONSOLE')) {
@@ -1213,7 +1214,7 @@ class SalesforceIntegration extends CrmAbstractIntegration
 
             // If there is still room - grab Mautic leads to create if the Lead object is enabled
             $sfEntityRecords = [];
-            if ('Lead' === $sfObject && (null === $limit || $limit > 0) && !empty($mauticLeadFieldString)) {
+            if ('Lead' === $sfObject && ($limit > 0) && !empty($mauticLeadFieldString)) {
                 try {
                     $sfEntityRecords = $this->getMauticContactsToCreate(
                         $checkEmailsInSF,
@@ -2509,11 +2510,9 @@ class SalesforceIntegration extends CrmAbstractIntegration
      * @param string $sfObject
      * @param string $sfFieldString
      *
-     * @return mixed
-     *
      * @throws ApiErrorException
      */
-    public function getDncHistory($sfObject, $sfFieldString)
+    public function getDncHistory($sfObject, $sfFieldString): mixed
     {
         return $this->getDoNotContactHistory($sfObject, $sfFieldString, 'DESC');
     }
@@ -2713,7 +2712,8 @@ class SalesforceIntegration extends CrmAbstractIntegration
             'company'
         );
 
-        $totalCount = $totalToProcess = $totalToCreate + $totalToUpdate;
+        $totalToCreate = is_array($totalToCreate) ? count($totalToCreate) : (int) $totalToCreate;
+        $totalCount    = $totalToProcess = $totalToCreate + $totalToUpdate;
 
         if (defined('IN_MAUTIC_CONSOLE')) {
             // start with update
@@ -2754,7 +2754,7 @@ class SalesforceIntegration extends CrmAbstractIntegration
 
             // If there is still room - grab Mautic companies to create if the Lead object is enabled
             $sfEntityRecords = [];
-            if ((null === $limit || $limit > 0) && !empty($mauticCompanyFieldString)) {
+            if (($limit > 0) && !empty($mauticCompanyFieldString)) {
                 $this->getMauticEntitesToCreate(
                     $checkCompaniesInSF,
                     $mauticCompanyFieldString,

@@ -261,7 +261,7 @@ class SmsController extends FormController
         // set the page we came from
         $page         = $session->get('mautic.sms.page', 1);
         $action       = $this->generateUrl('mautic_sms_action', ['objectAction' => 'new']);
-        $sms          = $request->request->get('sms') ?? [];
+        $sms          = $request->request->all()['sms'] ?? [];
         $updateSelect = 'POST' === $method
             ? ($sms['updateSelect'] ?? false)
             : $request->get('updateSelect', false);
@@ -427,7 +427,7 @@ class SmsController extends FormController
 
         // Create the form
         $action       = $this->generateUrl('mautic_sms_action', ['objectAction' => 'edit', 'objectId' => $objectId]);
-        $sms          = $request->request->get('sms') ?? [];
+        $sms          = $request->request->all()['sms'] ?? [];
         $updateSelect = 'POST' === $method
             ? ($sms['updateSelect'] ?? false)
             : $request->get('updateSelect', false);
@@ -625,10 +625,8 @@ class SmsController extends FormController
 
     /**
      * Deletes a group of entities.
-     *
-     * @return Response
      */
-    public function batchDeleteAction(Request $request)
+    public function batchDeleteAction(Request $request): Response
     {
         $page      = $request->getSession()->get('mautic.sms.page', 1);
         $returnUrl = $this->generateUrl('mautic_sms_index', ['page' => $page]);

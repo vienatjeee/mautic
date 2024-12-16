@@ -28,10 +28,7 @@ class FieldHelper
 
     private array $requiredFieldList = [];
 
-    /**
-     * @var array
-     */
-    private $syncFields = [];
+    private array $syncFields = [];
 
     /**
      * @var EventDispatcher
