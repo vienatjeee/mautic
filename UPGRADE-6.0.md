@@ -9,3 +9,9 @@
 - Removed `Mautic\CoreBundle\Factory\MauticFactory::getMauticBundles` use BundleHelper instead.
 - Removed `Mautic\CoreBundle\Factory\MauticFactory::getPluginBundles` use BundleHelper instead.
 - Removed `Mautic\CoreBundle\Factory\MauticFactory::getBundleConfig` use BundleHelper instead.
+- Removed `Mautic\CoreBundle\Factory\MauticFactory::getUser` use UserHelper instead.
+- Removed `Mautic\CoreBundle\Factory\MauticFactory::getTranslator` use Translator instead.
+- Removed `Mautic\CoreBundle\Factory\MauticFactory::getRouter` use Router or UrlGeneratorInterface instead.
+- Removed `Mautic\CoreBundle\Factory\MauticFactory::getLocalConfigFile` use dependency injection with KernelInterface, which will retrieve \AppKernel, then invoke getLocalConfigFile().
+- Removed `Mautic\CoreBundle\Factory\MauticFactory::getEnvironment` use dependency injection instead.
+- Removed `Mautic\CoreBundle\Factory\MauticFactory::getIpAddress` use IpLookupHelper instead.
